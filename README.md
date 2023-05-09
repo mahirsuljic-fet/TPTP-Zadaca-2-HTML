@@ -1,4 +1,4 @@
-# TPTP-Zadaca-2-HTML
+# TPTP - Zadaća 2 - Web stranica
 
 GitHub repozitorija za drugu zadaću iz predmeta TPTP.
 
