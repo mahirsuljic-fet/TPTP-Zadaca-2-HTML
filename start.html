@@ -3,22 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ime-stranice</title>
-    <link rel="stylesheet" href="/CSS/main.css">
-    <link rel="stylesheet" href="/CSS/start.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ime stranice</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/start.css" type="text/css">
 </head>
 <body>
-    <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Products</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">About</a></li>
-    </ul>
 
-    <p>muse kralj</p>
-    <p>jebavali je pusila nam</p>
+    <section class="uvod">
+
+    <div class="container">
+        <a href="start.html"><img src="css/images/logo.png" alt="logo" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li><a href="start.html">Početna</a></li>
+                <li><a href="proizvodi.html">Produkti</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
     
-    <script src="/JS/main.js"></script>
-    <script src="/JS/start.js"></script>
+    <div class="container2">
+        <h1 class="micanje">ELCOMPANY</h1>
+        <p>Dobrodošli u svijet elektronike gdje možete pronaći sve što vam treba.</p>
+        <form action="proizvodi.html">
+            <button class="btn">Započnite kupnju</button>
+        </form>
+    </div>
+    </section>
+
+    <section class="sekcije">
+        <h1>Više o nama</h1>
+
+        <div class="row">
+            <div class="row1">
+            <h3>Naš tim</h3>
+            <div>
+                <img src="css/images/elmo.jpg" alt="elmo" class="slike">
+                <p class="ime">Elmin Suljagić</p>
+            </div>
+
+            <div>
+                <img src="css/images/mahe.jpg" alt="mahe" class="slike">
+                <p class="ime">Mahir Suljić</p>
+            </div>
+
+            <div>
+                <img src="css/images/edo.jpg" alt="edo" class="slike">
+                <p class="ime">Edin Suljaković</p>
+            </div>
+
+            <div>
+                <img src="css/images/riki.jpg" alt="riki" class="slike">
+                <p class="ime">Rijad Suljetović</p>
+            </div>
+
+            </div>
+
+            <div class="row2">
+                <h3>Trenutne pogodnosti</h3>
+                <p>sise</p>
+            </div>
+
+            <div class="row1">
+                <h3>Naši partneri</h3><br>
+                <p>IBM</p>
+                <p>Intel</p>
+                <p>LG</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Dizajnirali: Elmin Suljagić, Mahir Suljić, Edin Suljaković, Rijad Suljetović <br> 
+            2023. godina</p>
+    </footer>
+
+
 </body>
 </html>
