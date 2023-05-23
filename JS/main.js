@@ -1,2 +1,0 @@
-/* MAIN - za sve stranice */
-
