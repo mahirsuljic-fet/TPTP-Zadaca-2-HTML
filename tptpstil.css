@@ -2,189 +2,192 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
 body {
-    margin: 0;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
 }
 
 .container {
-    width: 70%;
-    margin: 0 auto;
-    position: sticky;
-    top: 0;
-    left: 10%;
+  width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .logo {
-    float: left;
-    padding: 20px 0;
-    width: 22%;
-    height: 22%;
+  float: left;
+  margin-left: 12%;
+  padding: 10px 0;
+  width: 16%;
+  height: 16%;
+}
+
+.medija1 {
+  margin-right: 3%;
+}
+
+.medija {
+  padding: 14px 4px;
+  width: 2.5%;
+  height: 2.5%;
+  float: right;
+  border-radius: 25%;
 }
 
 .container nav {
-    float: right;
+  float: left;
+  margin-left: 25%;
 }
 
 .container nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .container nav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 23px;
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 20px;
 
-    position: relative;
+  position: relative;
 }
 
 
 .container nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
 .container nav a::before {
-    content: '';
-    display: block;
-    height: 8px;
-    background-color: cyan;
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: cyan;
 
-    position: bottom;
-    top: 0;
-    width: 0%;
+  position: bottom;
+  top: 0;
+  width: 0%;
 
-    transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 
 .container nav a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 .container nav a:hover {
-    color: cyan;
+  color: cyan;
+}
+
+.btn{
+  color: white;
+  padding: 0.8em 1em;
+  font-size: 100%;
+  font-weight: 400;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  transform: translateY(-10px);
+  background-color: white;
+  color: black;
 }
 
 .container2 {
-    width: 100%;
-    height: 90dvh;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    color: white;
-    font-size: 140%;
-}
-
-.partneri {
-    display: flex;
+  width: 100%;
+  height: 90dvh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  color: white;
+  font-size: 140%;
 }
 
 .uvod {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/bg.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .sekcije {
-    width: 90%;
-    margin: auto;
-    margin-top: 10px;
-    text-align: center;
-    padding-top: 70px;
-    font-size: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/edoreko2.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px 0px 20px 0px;
+  align-items: flex-start;
+  background-color: rgb(239, 250, 255);
 }
 
-.row {
-    margin-top: 4%;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 5%;
+.srsekcija {
+  width: 60%;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/edoreko2.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
 
 .row1 {
-    flex-basis: 25%;
-    background: rgb(27, 102, 117);
-    border-radius: 7px;
-    padding: 20px 12px;
-    margin-left: 14px;
-    margin-right: 14px;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 3px 0px cyan;
-}
-
-.row2 {
-    flex-basis: 40%;
-    background: rgb(27, 102, 117);
-    border-radius: 7px;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 3px 0px cyan;
+  width: 18%;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  box-sizing: border-box;
+  border: 6px solid rgb(27, 102, 117);
+  box-shadow: 8px 8px 15px 0px black;
 }
 
 footer {
-    text-align: center;
-    padding: 3px;
-    background-color: rgb(27, 102, 117);
-    color: white;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(27, 102, 117);
+  color: white;
 }
 
 .slike {
-    width: 20%;
-    height: 15%;
-    vertical-align: middle;
-    line-height: normal;
+  width: 50%;
+  height: 40%;
+  border-radius: 50%;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .ime {
-    margin-left: 25px;
-    display: inline-block;
+  margin-left: 25px;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 15px;
 }
 
 @keyframes micanje {
-    from {
-        transform: translateY(-330px);
-    }
+  from {
+    transform: translateY(-330px);
+  }
 
-    to {
-        transform: translateY(0);
-    }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .micanje {
-    animation: micanje 1s ease-in;
-}
-
-.btn {
-    color: white;
-    padding: 0.8em 1em;
-    font-size: 100%;
-    font-weight: 400;
-    background-color: transparent;
-    border: 3px solid white;
-    border-radius: 8px;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.btn:hover {
-    transform: translateY(-10px);
-    background-color: white;
-    color: black;
+  animation: micanje 1s ease-in;
 }
 
 /************************************************
