@@ -5,7 +5,6 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
-  color: white;
 }
 
 .container {
@@ -36,18 +35,18 @@ body {
   border-radius: 25%;
 }
 
-.container nav {
+nav {
   float: left;
   margin-left: 25%;
 }
 
-.container nav ul {
+nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.container nav li {
+nav li {
   display: inline-block;
   margin-left: 70px;
   padding-top: 20px;
@@ -56,14 +55,14 @@ body {
 }
 
 
-.container nav a {
+nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-.container nav a::before {
+nav a::before {
   content: '';
   display: block;
   height: 8px;
@@ -76,15 +75,15 @@ body {
   transition: all ease-in-out 300ms;
 }
 
-.container nav a:hover::before {
+nav a:hover::before {
   width: 100%;
 }
 
-.container nav a:hover {
+nav a:hover {
   color: cyan;
 }
 
-.btn {
+.btn{
   color: white;
   padding: 0.8em 1em;
   font-size: 100%;
@@ -96,7 +95,7 @@ body {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover{
   transform: translateY(-10px);
   background-color: white;
   color: black;
@@ -130,18 +129,7 @@ body {
   justify-content: space-evenly;
   padding: 20px 0px 20px 0px;
   align-items: flex-start;
-  background-color: rgb(228, 240, 255);
-}
-
-.srsekcija {
-  width: 60%;
-  text-align: center;
-  padding-top: 50px;
-  font-size: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/edoreko2.jpg);
-  background-position: center;
-  background-size: cover;
-  color: white;
+  background-color: rgb(214, 230, 251);
 }
 
 .row1 {
@@ -183,30 +171,32 @@ footer {
   animation: micanje 1s ease-in;
 }
 
-.video {
+.video{
   box-sizing: border-box;
   border: 2px solid rgb(27, 102, 117);
   height: 100%;
   width: 100%;
 }
 
-.slike1 {
+.slike1{
   width: 70%;
   vertical-align: middle;
   line-height: normal;
+  transition: all 0.6s;
+  cursor: pointer;
 }
 
-.slike1:hover {
-  background: radial-gradient(rgba(0, 0, 0, 0.14) 10%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.07) 30%) rgba(0, 0, 0, 0.28);
-  transition: background-color 4.5s;
+.slike1:hover{
+  box-shadow: 0 0 20px blue;
+  background-color: rgba(27, 102, 117,0.3);
+  transform: scale(1.08);
+  border-radius: 5%;
 }
 
 .pop {
-  --b: 5px;
-  /* border thickness */
-  --f: 1;
-  /* initial scale */
-
+  --b: 5px; /* border thickness */
+  --f: 1; /* initial scale */
+  
   width: 50%;
   height: 40%;
   aspect-ratio: 1;
@@ -216,16 +206,59 @@ footer {
   border-radius: 0 0 999px 999px;
   border: 5px solid;
   border-color: #0000 #0000 #1FE5A9 #0000;
-  background:
-    radial-gradient(circle closest-side,
-      #1FE5A9 calc(99% - var(--b)), #1FE5A9 calc(100% - var(--b)) 99%, #0000) 50%/calc(100%/var(--f)) 100% no-repeat border-box;
+  background: 
+    radial-gradient(
+      circle closest-side,
+      #1FE5A9 calc(99% - var(--b)),#1FE5A9 calc(100% - var(--b)) 99%,#0000
+     ) 50%/calc(100%/var(--f)) 100% no-repeat border-box;
   transform: scale(var(--f));
   transition: .5s;
 }
-
 .pop:hover {
-  --f: 1.35;
-  /* hover scale */
+  --f: 1.35; /* hover scale */
+}
+
+.srsekcija {
+  width: 60%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+  background-position: center;
+  background-size: cover;
+}
+
+.srsekcija1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.srsekcija11{
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 20px 20px 20px;
+  border: 2px solid slateblue;
+  background-color: rgba(228, 240, 255,0.2);
+  border-radius: 5%;
+  padding-top: 10px;
+  transition: all 0.4s;
+}
+
+.srsekcija11:hover{
+  box-shadow: 0 0 20px slateblue;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.foto1{
+  height: 270px;
+  border-radius: 5%;
+}
+
+.foto2{
+  height: 200px;
 }
 
 /************************************************
