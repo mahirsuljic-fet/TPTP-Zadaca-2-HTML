@@ -36,18 +36,18 @@ body {
   border-radius: 25%;
 }
 
-nav {
+.container nav {
   float: left;
   margin-left: 25%;
 }
 
-nav ul {
+.container nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav li {
+.container nav li {
   display: inline-block;
   margin-left: 70px;
   padding-top: 20px;
@@ -56,14 +56,14 @@ nav li {
 }
 
 
-nav a {
+.container nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-nav a::before {
+.container nav a::before {
   content: '';
   display: block;
   height: 8px;
@@ -76,15 +76,15 @@ nav a::before {
   transition: all ease-in-out 300ms;
 }
 
-nav a:hover::before {
+.container nav a:hover::before {
   width: 100%;
 }
 
-nav a:hover {
+.container nav a:hover {
   color: cyan;
 }
 
-.btn{
+.btn {
   color: white;
   padding: 0.8em 1em;
   font-size: 100%;
@@ -96,7 +96,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   transform: translateY(-10px);
   background-color: white;
   color: black;
@@ -183,28 +183,30 @@ footer {
   animation: micanje 1s ease-in;
 }
 
-.video{
+.video {
   box-sizing: border-box;
   border: 2px solid rgb(27, 102, 117);
   height: 100%;
   width: 100%;
 }
 
-.slike1{
+.slike1 {
   width: 70%;
   vertical-align: middle;
   line-height: normal;
 }
 
-.slike1:hover{
-  background: radial-gradient(rgba(0,0,0,0.14) 10%,rgba(0,0,0,0.1) 20%,rgba(0,0,0,0.07) 30%) rgba(0,0,0,0.28);
+.slike1:hover {
+  background: radial-gradient(rgba(0, 0, 0, 0.14) 10%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.07) 30%) rgba(0, 0, 0, 0.28);
   transition: background-color 4.5s;
 }
 
 .pop {
-  --b: 5px; /* border thickness */
-  --f: 1; /* initial scale */
-  
+  --b: 5px;
+  /* border thickness */
+  --f: 1;
+  /* initial scale */
+
   width: 50%;
   height: 40%;
   aspect-ratio: 1;
@@ -214,16 +216,16 @@ footer {
   border-radius: 0 0 999px 999px;
   border: 5px solid;
   border-color: #0000 #0000 #1FE5A9 #0000;
-  background: 
-    radial-gradient(
-      circle closest-side,
-      #1FE5A9 calc(99% - var(--b)),#1FE5A9 calc(100% - var(--b)) 99%,#0000
-     ) 50%/calc(100%/var(--f)) 100% no-repeat border-box;
+  background:
+    radial-gradient(circle closest-side,
+      #1FE5A9 calc(99% - var(--b)), #1FE5A9 calc(100% - var(--b)) 99%, #0000) 50%/calc(100%/var(--f)) 100% no-repeat border-box;
   transform: scale(var(--f));
   transition: .5s;
 }
+
 .pop:hover {
-  --f: 1.35; /* hover scale */
+  --f: 1.35;
+  /* hover scale */
 }
 
 /************************************************
@@ -231,106 +233,111 @@ footer {
 ************************************************/
 
 .empty {
-    height: 4em;
+  height: 4em;
 }
 
 .nav-proizvodi {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    background-color: rgba(0, 50, 100, 0.15);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(0, 50, 100, 0.15);
+}
+
+.nav-proizvodi nav {
+  display: flex;
+  justify-content: center;
 }
 
 .nav-proizvodi nav ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .nav-proizvodi nav ul li {
-    display: inline-block;
-    margin: 0 1em;
+  display: inline-block;
+  margin: 0 1em;
 }
 
 .nav-proizvodi nav ul li a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .nav-proizvodi nav ul li a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .nav-proizvodi nav ul li a::before {
-    content: '';
-    display: block;
-    height: 8px;
-    background-color: cyan;
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: cyan;
 
-    position: bottom;
-    top: 0;
-    width: 0%;
+  position: bottom;
+  top: 0;
+  width: 0%;
 
-    transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 
 .nav-proizvodi nav ul li a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 .nav-proizvodi nav ul li a:hover {
-    color: cyan;
+  color: cyan;
 }
 
 .kategorija-proizvoda {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .kategorija-proizvoda span {
-    background-color: rgba(0, 50, 100, 0.5);
-    padding: 0.5em 1em;
-    border-radius: 1em;
+  background-color: rgba(0, 50, 100, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 1em;
 }
 
 .proizvodi {
-    max-width: 60em;
-    padding: 0.5em 1em;
-    margin: 2em auto;
-    text-align: justify;
-    background-image: url("/images/proizvodi/proizvod-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 2em;
-    display: flex;
-    flex-flow: row wrap;
-    flex-wrap: wrap;
-    justify-content: center;
+  max-width: 60em;
+  padding: 0.5em 1em;
+  margin: 2em auto;
+  text-align: justify;
+  background-image: url("/images/proizvodi/proizvod-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-proizvodi {
-    display: flex;
-    justify-content: inherit;
-    width: 100%;
+  display: flex;
+  justify-content: inherit;
+  width: 100%;
 }
 
 .ime-proizvoda {
-    font-style: bold;
-    font-size: x-large;
-    text-align: center;
+  font-style: bold;
+  font-size: x-large;
+  text-align: center;
 }
 
 .slika-proizvoda {
-    margin: 0 1em 1em 0;
-    font-style: bold;
-    font-size: larger;
-    width: 11em;
-    align-self: baseline;
+  margin: 0 1em 1em 0;
+  font-style: bold;
+  font-size: larger;
+  width: 11em;
+  align-self: baseline;
 }
 
 .opis-proizvoda {
-    width: 60%;
+  width: 60%;
 }
 
 /**********************************************
@@ -428,15 +435,47 @@ footer {
 }
 
 @keyframes shake {
-  0% { transform: translate(0.05em, 0.05em) rotate(0deg); }
-  10% { transform: translate(-0.05em, -0.1em) rotate(-1deg); }
-  20% { transform: translate(-0.15em, 0px) rotate(1deg); }
-  30% { transform: translate(0.15em, 0.1em) rotate(0deg); }
-  40% { transform: translate(0.05em, -0.05em) rotate(1deg); }
-  50% { transform: translate(-0.05em, 0.1em) rotate(-1deg); }
-  60% { transform: translate(-0.15em, 0.05em) rotate(0deg); }
-  70% { transform: translate(0.15em, 0.05em) rotate(-1deg); }
-  80% { transform: translate(-0.05em, -0.05em) rotate(1deg); }
-  90% { transform: translate(0.05em, 0.1em) rotate(0deg); }
-  100% { transform: translate(0.05em, -0.1em) rotate(-1deg); }
+  0% {
+    transform: translate(0.05em, 0.05em) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-0.05em, -0.1em) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-0.15em, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(0.15em, 0.1em) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(0.05em, -0.05em) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-0.05em, 0.1em) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-0.15em, 0.05em) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(0.15em, 0.05em) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-0.05em, -0.05em) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(0.05em, 0.1em) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0.05em, -0.1em) rotate(-1deg);
+  }
 }
