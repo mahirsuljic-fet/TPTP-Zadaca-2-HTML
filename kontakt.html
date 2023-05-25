@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELCOMPANY - Kontakt</title>
     <link rel="stylesheet" href="tptpstil.css" type="text/css">
+    <script src="https://kit.fontawesome.com/069068b4ae.js" crossorigin="anonymous"></script>
+    <title>ELCOMPANY - Kontakt</title>
 </head>
 
 <body>
@@ -24,12 +25,85 @@
             </nav>
         </div>
 
-        <div class="container2">
-            <p>Ovde je kontakt</p>
+        <div class="empty">&nbsp;</div>
+        <div class="empty">&nbsp;</div>
+
+        <div class="main-container-kontakt">
+            <div class="sub-container-kontakt">
+                <p>Mogućnost dostave:</p>
+                <ul>
+                    <li>Brza pošta</li>
+                    <li>Lično preuzimanje</li>
+                    <li>Dostava kompanije</li>
+                </ul>
+                <p>Ograničenja putem dostave:</p>
+                <ul>
+                    <li>Dostava nije moguća izvan BiH</li>
+                    <li>Dostava nije uključena u cijenu artikla</li>
+                </ul>
+            </div>
+            <div class="razmak-kontakt">&nbsp;</div>
+            <div class="sub-container-kontakt">
+                <p>Kako doći do nas</p>
+                <i class="fas fa-map-marker-alt"></i> Lokacija
+            </div>
+
         </div>
+
+        <div class="info-kontakt">
+
+            <div class="request-info-kontakt">
+                <p>Da bi ste pristupili našim informacijama popunite sljedeci obrazac</p>
+                <form>
+                    <h1>Pristup</h1>
+                    <p>ime(neobavezno)</p>
+                    <input type="text">
+                    <p>prezime(neobavezno)</p>
+                    <input type="text">
+                    <p> Nisam robot(obavezno):
+                        Potvrdi<input type="checkbox" name="robot" checked="false" onclick="robot_check()">
+                    </p>
+                </form>
+            </div>
+
+            <div id="info-display-kontakt">
+                <p class="emph-kontakt">Informacije:</p>
+                <span>
+                    Naša kompanija jedna od onih "modernih" kompanija, koja se bavi prodajom elektronickih uređaja i
+                    sklopova,
+                    kao i
+                    računarske opreme.
+                    Naša kompanija je osnovana 17.5.2023. godine
+                </span>
+                <p>
+                    Nešto detaljnije o našem kolektivu:
+                <p>
+                    Osnivač ove ove firme odnosno kompanije je Mahir Suljić, nešto više o njemu možete pronaći na
+                    njegovom
+                    <a href="https://facebook.com">facebook profilu. </a>
+                </p>
+            </div>
+        </div>
+
     </section>
+    <footer>
+        <p>Dizajnirali: Elmin Suljagić, Mahir Suljić, Edin Suljaković, Rijad Suljetović <br>
+            2023. godina</p>
+    </footer>
+
+    <div id="robot-disable-page">&nbsp;</div>
+    <div id="robot-kontakt-container">
+        <div id="robot-kontakt">
+            <p id="robot-error"></p>
+            <img id="robot-image" src="" alt="životinja">
+            <p>Koja je životinja na slici?</p>
+            <input type="text" name="robot-answer" id="robot-answer"> <br>
+            <input type="submit" value="Pošalji odgovor" id="robot-answer-btn" onclick="robot_answer()">
+        </div>
+    </div>
 
     <script src="tptpobrazac.js"></script>
+
 </body>
 
 </html>
