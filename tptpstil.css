@@ -419,6 +419,7 @@ footer {
   padding: 1em 1.5em;
   border-radius: 1em;
   border: 0.25em solid rgba(0, 50, 100, 0.75);
+  text-align: justify;
 }
 
 .info-kontakt a {
