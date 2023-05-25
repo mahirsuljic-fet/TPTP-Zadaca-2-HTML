@@ -44,7 +44,6 @@ function robot_check() {
 }
 
 function robot_answer() {
-    console.log("test");
     var robot_div = document.getElementById("robot-kontakt");
     var robot_container = document.getElementById("robot-kontakt-container");
     var info_text = document.getElementById("info-display-kontakt");
@@ -62,12 +61,17 @@ function robot_answer() {
     }
     else {
         info_text.style.display = "none";
+        error_p.innerHTML = "Porešan odgovor!";
         robot_div.style['border'] = "0.25em solid red";
         robot_div.style['animation'] = "shake 0.5s";
-        
+
         var newelm = robot_div.cloneNode(true);
         robot_div.parentNode.replaceChild(newelm, robot_div);
-
-        error_p.innerHTML = "Porešan odgovor!";
     }
 }
+
+var inputs = document.getElementsByTagName("input");
+
+for (var i = 0; i < inputs.length; i++)
+    if (inputs[i].type == "checkbox")
+        inputs[i].checked = false;
