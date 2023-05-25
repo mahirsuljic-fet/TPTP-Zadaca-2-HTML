@@ -353,6 +353,10 @@ footer {
   justify-content: center;
 }
 
+.proizvodi:last-of-type {
+  margin: 0 auto;
+}
+
 .main-proizvodi {
   display: flex;
   justify-content: inherit;
