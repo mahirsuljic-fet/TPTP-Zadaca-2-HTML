@@ -363,6 +363,9 @@ footer {
   font-style: bold;
   font-size: x-large;
   text-align: center;
+  background-color: rgba(0, 50, 100, 0.75);
+  padding: 0.5em 1em;
+  border-radius: 1em;
 }
 
 .slika-proizvoda {
@@ -375,6 +378,9 @@ footer {
 
 .opis-proizvoda {
   width: 60%;
+  background-color: rgba(0, 50, 100, 0.75);
+  padding: 0.5em 1em;
+  border-radius: 1em;
 }
 
 /**********************************************
