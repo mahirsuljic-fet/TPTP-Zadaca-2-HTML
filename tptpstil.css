@@ -374,6 +374,7 @@ footer {
   font-size: larger;
   width: 11em;
   align-self: baseline;
+  border-radius: 1em;
 }
 
 .opis-proizvoda {
