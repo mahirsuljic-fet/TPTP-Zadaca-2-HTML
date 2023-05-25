@@ -355,6 +355,11 @@ footer {
   border: 0.25em solid rgba(0, 50, 100, 0.75);
 }
 
+.sub-container-kontakt a {
+  color: white;
+  text-decoration: none;
+}
+
 .razmak-kontakt {
   width: 5em;
 }
