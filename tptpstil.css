@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
+  color: white;
 }
 
 .container {
@@ -35,18 +36,18 @@ body {
   border-radius: 25%;
 }
 
-nav {
+.container nav {
   float: left;
   margin-left: 25%;
 }
 
-nav ul {
+.container nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav li {
+.container nav li {
   display: inline-block;
   margin-left: 70px;
   padding-top: 20px;
@@ -55,14 +56,14 @@ nav li {
 }
 
 
-nav a {
+.container nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-nav a::before {
+.container nav a::before {
   content: '';
   display: block;
   height: 8px;
@@ -75,15 +76,15 @@ nav a::before {
   transition: all ease-in-out 300ms;
 }
 
-nav a:hover::before {
+.container nav a:hover::before {
   width: 100%;
 }
 
-nav a:hover {
+.container nav a:hover {
   color: cyan;
 }
 
-.btn{
+.btn {
   color: white;
   padding: 0.8em 1em;
   font-size: 100%;
@@ -95,7 +96,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   transform: translateY(-10px);
   background-color: white;
   color: black;
@@ -171,14 +172,14 @@ footer {
   animation: micanje 1s ease-in;
 }
 
-.video{
+.video {
   box-sizing: border-box;
   border: 2px solid rgb(27, 102, 117);
   height: 100%;
   width: 100%;
 }
 
-.slike1{
+.slike1 {
   width: 70%;
   vertical-align: middle;
   line-height: normal;
@@ -186,17 +187,19 @@ footer {
   cursor: pointer;
 }
 
-.slike1:hover{
+.slike1:hover {
   box-shadow: 0 0 20px blue;
-  background-color: rgba(27, 102, 117,0.3);
+  background-color: rgba(27, 102, 117, 0.3);
   transform: scale(1.08);
   border-radius: 5%;
 }
 
 .pop {
-  --b: 5px; /* border thickness */
-  --f: 1; /* initial scale */
-  
+  --b: 5px;
+  /* border thickness */
+  --f: 1;
+  /* initial scale */
+
   width: 50%;
   height: 40%;
   aspect-ratio: 1;
@@ -206,16 +209,16 @@ footer {
   border-radius: 0 0 999px 999px;
   border: 5px solid;
   border-color: #0000 #0000 #1FE5A9 #0000;
-  background: 
-    radial-gradient(
-      circle closest-side,
-      #1FE5A9 calc(99% - var(--b)),#1FE5A9 calc(100% - var(--b)) 99%,#0000
-     ) 50%/calc(100%/var(--f)) 100% no-repeat border-box;
+  background:
+    radial-gradient(circle closest-side,
+      #1FE5A9 calc(99% - var(--b)), #1FE5A9 calc(100% - var(--b)) 99%, #0000) 50%/calc(100%/var(--f)) 100% no-repeat border-box;
   transform: scale(var(--f));
   transition: .5s;
 }
+
 .pop:hover {
-  --f: 1.35; /* hover scale */
+  --f: 1.35;
+  /* hover scale */
 }
 
 .srsekcija {
@@ -227,37 +230,37 @@ footer {
   background-size: cover;
 }
 
-.srsekcija1{
+.srsekcija1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.srsekcija11{
+.srsekcija11 {
   align-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 20px 20px;
   border: 2px solid slateblue;
-  background-color: rgba(228, 240, 255,0.2);
+  background-color: rgba(228, 240, 255, 0.2);
   border-radius: 5%;
   padding-top: 10px;
   transition: all 0.4s;
 }
 
-.srsekcija11:hover{
+.srsekcija11:hover {
   box-shadow: 0 0 20px slateblue;
   cursor: pointer;
   opacity: 0.8;
 }
 
-.foto1{
+.foto1 {
   height: 270px;
   border-radius: 5%;
 }
 
-.foto2{
+.foto2 {
   height: 200px;
 }
 
