@@ -32,7 +32,7 @@ function robot_check() {
 
     if (cb.checked) {
         i = Math.floor(Math.random() * (animals.length));
-        document.getElementById("robot-image").src = "/images/kontakt/" + animals[i] + ".jpg";
+        document.getElementById("robot-image").src = "images/kontakt/" + animals[i] + ".jpg";
 
         robot_container.style.display = "flex";
         disable_div.style.display = "block";
@@ -62,8 +62,8 @@ function robot_answer() {
     else {
         info_text.style.display = "none";
         error_p.innerHTML = "Porešan odgovor!";
-        robot_div.style['border'] = "0.25em solid red";
-        robot_div.style['animation'] = "shake 0.5s";
+        robot_div.style.border = "0.25em solid red";
+        robot_div.style.animation = "shake 0.5s";
 
         var newelm = robot_div.cloneNode(true);
         robot_div.parentNode.replaceChild(newelm, robot_div);

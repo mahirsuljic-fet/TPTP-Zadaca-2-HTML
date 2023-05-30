@@ -489,6 +489,11 @@ footer {
   color: red;
 }
 
+.emph-kontakt {
+  font-weight: bold;
+  font-size: large;
+}
+
 @keyframes shake {
   0% {
     transform: translate(0.05em, 0.05em) rotate(0deg);
