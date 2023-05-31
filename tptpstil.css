@@ -498,6 +498,7 @@ footer {
 
 #robot-error {
   color: red;
+  margin-top: 0;
 }
 
 .emph-kontakt {
@@ -510,8 +511,9 @@ footer {
 }
 
 .robot-exit {
-  font-size: 1em;
+  font-size: 1.3em;
   text-align: right;
+  margin: 0;
 }
 
 .robot-exit:hover {
