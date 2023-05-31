@@ -114,6 +114,9 @@ function robot_answer() {
 }
 
 function robot_exit() {
+    document.getElementById("robot-error").innerHTML = "";
+    document.getElementById("robot-kontakt").style.animation = "";
+    document.getElementById("robot-kontakt").style.border = "0.25em solid rgba(0, 40, 90, 1)";
     document.getElementById("robot-kontakt-container").style.display = "none";
     document.getElementById("robot-disable-page").style.display = "none";
     document.getElementsByName("robot")[0].checked = false;
