@@ -116,6 +116,7 @@ function robot_answer() {
 function robot_exit() {
     document.getElementById("robot-kontakt-container").style.display = "none";
     document.getElementById("robot-disable-page").style.display = "none";
+    document.getElementsByName("robot")[0].checked = false;
 }
 
 var inputs = document.getElementsByTagName("input");
