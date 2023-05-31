@@ -41,15 +41,14 @@ function robot_check() {
     kontaktvld.style.animation = "";
 
     // provjera unosa imena prazimena i e-maila
-    if(!name.match(/^[a-zA-Z]+$/) && name != "")
+    if (!name.match(/^[a-zA-Z]+$/) && name != "")
         errormsg.innerHTML += "Ime nije validno! <br>";
-    if(!lastname.match(/^[a-zA-Z]+$/) && lastname != "")
+    if (!lastname.match(/^[a-zA-Z]+$/) && lastname != "")
         errormsg.innerHTML += "Prezime nije validno! <br>";
-    if(!email.match(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/) && email != "")
+    if (!email.match(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/) && email != "")
         errormsg.innerHTML += "E-mail nije validan! <br>";
 
-    if(errormsg.innerHTML != "")
-    {
+    if (errormsg.innerHTML != "") {
         kontaktvld.style.border = "0.25em solid red";
         kontaktvld.style.animation = "shake 0.5s";
         cb.checked = false;
@@ -103,7 +102,7 @@ function robot_answer() {
 
         var newelm = robot_div.cloneNode(true);
         robot_div.parentNode.replaceChild(newelm, robot_div);
-        
+
         document.getElementById("robot-answer").addEventListener('keypress', function (e) {
             console.log("Test");
             if (e.key === 'Enter')
@@ -112,6 +111,11 @@ function robot_answer() {
 
         document.getElementById("robot-answer").focus();
     }
+}
+
+function robot_exit() {
+    robot_container.style.display = "none";
+    disable_div.style.display = "none";
 }
 
 var inputs = document.getElementsByTagName("input");
