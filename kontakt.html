@@ -45,25 +45,38 @@
             </div>
             <div class="razmak-kontakt">&nbsp;</div>
             <div class="sub-container-kontakt">
-                <p>Kako doći do nas</p>
-                <a href="https://www.google.com/maps/place/Faculty+of+Electrical+Engineering/data=!4m7!3m6!1s0x475ead228f123b2d:0xcf33c765f8383821!8m2!3d44.5378682!4d18.6748216!16s%2Fg%2F121qn0mq!19sChIJLTsSjyKtXkcRITg4-GXHM88?authuser=0&hl=en&rclk=1"><i class="fas fa-map-marker-alt"></i> Lokacija</a>
-                <br>
-                <a href="elcompany@elcompany.com"><i class="fas fa-envelope"></i> E-Mail</a>
+                <p>Kako doći do nas <br>
+                    <a href="https://www.google.com/maps/place/Faculty+of+Electrical+Engineering/data=!4m7!3m6!1s0x475ead228f123b2d:0xcf33c765f8383821!8m2!3d44.5378682!4d18.6748216!16s%2Fg%2F121qn0mq!19sChIJLTsSjyKtXkcRITg4-GXHM88?authuser=0&hl=en&rclk=1"><i class="fas fa-map-marker-alt"></i> Lokacija</a>
+                </p>
+                <p>
+                    <a href="elcompany@elcompany.com"><i class="fas fa-envelope"></i> E-Mail <br>
+                        elcompany@elcompany.com
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> Telefon <br>
+                    +387 35 259 600 <br>
+                    +387 35 259 617 <br>
+                    +387 80 05 03 05
+                </p>
             </div>
 
         </div>
 
-        <div class="info-kontakt">
+        <div class="info-kontakt" id="info-kontakt">
 
             <div class="request-info-kontakt">
                 <p>Da bi ste pristupili našim informacijama popunite sljedeci obrazac</p>
                 <form>
                     <h1>Pristup</h1>
-                    <p>ime(neobavezno)</p>
-                    <input type="text">
-                    <p>prezime(neobavezno)</p>
-                    <input type="text">
-                    <p> Nisam robot(obavezno):
+                    <p id="kontakt-validation-error"></p>
+                    <p>Ime (neobavezno)</p>
+                    <input type="text" id="kontakt-ime" pattern="[A-Za-z]">
+                    <p>Prezime (neobavezno)</p>
+                    <input type="text" id="kontakt-prezime" pattern="[A-Za-z]">
+                    <p>E-mail (neobavezno)</p>
+                    <input type="email" id="kontakt-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="naziv@domena.com">
+                    <p> Nisam robot (obavezno):
                         Potvrdi<input type="checkbox" name="robot" checked="false" onclick="robot_check()">
                     </p>
                 </form>

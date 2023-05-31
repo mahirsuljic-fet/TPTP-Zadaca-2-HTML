@@ -494,6 +494,10 @@ footer {
   font-size: large;
 }
 
+#kontakt-validation-error {
+  color: red;
+}
+
 @keyframes shake {
   0% {
     transform: translate(0.05em, 0.05em) rotate(0deg);
