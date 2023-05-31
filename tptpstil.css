@@ -11,24 +11,17 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  z-index: 100;
-  height: 80px;
-  background-color: rgb(27 102 117 / 0.85);
 }
 
 .logo {
   float: left;
   margin-left: 12%;
   padding: 10px 0;
-  width: 200px;
-  margin-top: 10px;
-}
-
-.logo {
-  filter: brightness(0) invert(1);
+  width: 16%;
+  height: 16%;
 }
 
 .medija1 {
@@ -61,6 +54,7 @@ body {
 
   position: relative;
 }
+
 
 .container nav a {
   color: white;
@@ -124,8 +118,7 @@ body {
 .uvod {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(images/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/bg.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -216,16 +209,12 @@ footer {
   line-height: normal;
   border-radius: 0 0 999px 999px;
   border: 5px solid;
-  border-color: #0000 #0000 #1fe5a9 #0000;
-  background: radial-gradient(
-      circle closest-side,
-      #1fe5a9 calc(99% - var(--b)),
-      #1fe5a9 calc(100% - var(--b)) 99%,
-      #0000
-    )
-    50% / calc(100% / var(--f)) 100% no-repeat border-box;
+  border-color: #0000 #0000 #1FE5A9 #0000;
+  background:
+    radial-gradient(circle closest-side,
+      #1FE5A9 calc(99% - var(--b)), #1FE5A9 calc(100% - var(--b)) 99%, #0000) 50%/calc(100%/var(--f)) 100% no-repeat border-box;
   transform: scale(var(--f));
-  transition: 0.5s;
+  transition: .5s;
 }
 
 .pop:hover {
@@ -353,7 +342,7 @@ footer {
   padding: 0.5em 1em;
   margin: 2em auto;
   text-align: justify;
-  background-image: url('/images/proizvodi/proizvod-background.png');
+  background-image: url("/images/proizvodi/proizvod-background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -475,7 +464,7 @@ footer {
   font-size: 0.75em;
 }
 
-#robot-kontakt-container input[type='submit'] {
+#robot-kontakt-container input[type=submit] {
   color: white;
   width: 54%;
   padding: 0.4em;
@@ -503,6 +492,10 @@ footer {
 .emph-kontakt {
   font-weight: bold;
   font-size: large;
+}
+
+#kontakt-validation-error {
+  color: red;
 }
 
 @keyframes shake {
