@@ -514,6 +514,10 @@ footer {
   text-align: right;
 }
 
+.robot-exit:hover {
+  cursor: pointer;
+}
+
 @keyframes shake {
   0% {
     transform: translate(0.05em, 0.05em) rotate(0deg);
