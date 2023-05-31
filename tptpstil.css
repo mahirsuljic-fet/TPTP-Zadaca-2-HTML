@@ -511,6 +511,7 @@ footer {
 
 .robot-exit {
   font-size: 1em;
+  text-align: right;
 }
 
 @keyframes shake {

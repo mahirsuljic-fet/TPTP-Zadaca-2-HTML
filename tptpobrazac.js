@@ -114,8 +114,8 @@ function robot_answer() {
 }
 
 function robot_exit() {
-    robot_container.style.display = "none";
-    disable_div.style.display = "none";
+    document.getElementById("robot-kontakt-container").style.display = "none";
+    document.getElementById("robot-disable-page").style.display = "none";
 }
 
 var inputs = document.getElementsByTagName("input");
