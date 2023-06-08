@@ -2,7 +2,7 @@
 
 GitHub repozitorija za drugu zadaću iz predmeta TPTP.
 
-Ime stranice: 
+Ime stranice: ELCOMPANY
 
 Članovi projekta: Mahir Suljić, Elmin Suljagić, Edin Suljaković i Rijad Suljetović
 
