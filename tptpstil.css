@@ -217,13 +217,10 @@ footer {
   border-radius: 0 0 999px 999px;
   border: 5px solid;
   border-color: #0000 #0000 #1fe5a9 #0000;
-  background: radial-gradient(
-      circle closest-side,
+  background: radial-gradient(circle closest-side,
       #1fe5a9 calc(99% - var(--b)),
       #1fe5a9 calc(100% - var(--b)) 99%,
-      #0000
-    )
-    50% / calc(100% / var(--f)) 100% no-repeat border-box;
+      #0000) 50% / calc(100% / var(--f)) 100% no-repeat border-box;
   transform: scale(var(--f));
   transition: 0.5s;
 }
@@ -403,27 +400,39 @@ footer {
 /**********************************************
                     KONTAKT
 **********************************************/
+
+/* container koji sadrzi onaj lijevi i desni div */
 .main-container-kontakt {
   display: flex;
   justify-content: center;
 }
 
+/* lijevi i desni div */
 .sub-container-kontakt {
+  /*
+    boje idu od 0 do 255, ovo znaci postavi pozadinsku boju na
+    0 crvene (r - red), 50 zelene (g - green), 100 plave (b - blue) i nek bude 0.5 (50%) providna (a - alpha)
+    (1 je skroz se vidi, 0 je nikako se ne vidi)
+  */
   background-color: rgba(0, 50, 100, 0.5);
-  padding: 1em 1.5em;
-  border-radius: 1em;
   border: 0.25em solid rgba(0, 50, 100, 0.75);
+  padding: 1em 1.5em;
+  /* border-radius zaobli coskove elementa */
+  border-radius: 1em;
 }
 
+/* linkovi unutar lijevog i desnog div-a */
 .sub-container-kontakt a {
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* brise underline i ostalo, da ljepse izgleda link */
 }
 
+/* razmak izmedju lijevog i desnog div-a */
 .razmak-kontakt {
   width: 5em;
 }
 
+/* glavni div sto sadrzi obrazac i informacije */
 .info-kontakt {
   margin: 2em auto;
   width: 40em;
@@ -442,10 +451,12 @@ footer {
   display: inline;
 }
 
+/* sakrij informacije, ovo se sa JavaScript-om prikaze kad se potvrdi da korisnik nije robot */
 #info-display-kontakt {
   display: none;
 }
 
+/* container za div sto izadje sa slikom macke i cuke, da bi se on mogo centrirat lijepo */
 #robot-kontakt-container {
   width: 100%;
   text-align: center;
@@ -454,6 +465,7 @@ footer {
   display: none;
 }
 
+/* div sto izadje sa slikom macke i cuke */
 #robot-kontakt {
   border: 0.25em solid rgba(0, 40, 90, 1);
   background-color: rgba(0, 50, 100, 1);
@@ -466,6 +478,7 @@ footer {
   margin: auto;
 }
 
+/* polje za odgovor */
 #robot-kontakt-container input {
   width: 50%;
   margin: 0.25em auto;
@@ -475,6 +488,7 @@ footer {
   font-size: 0.75em;
 }
 
+/* dugme */
 #robot-kontakt-container input[type='submit'] {
   color: white;
   width: 54%;
@@ -487,6 +501,7 @@ footer {
   width: 100%;
 }
 
+/* div koji zakloni i onemogucava kliktanje na stranicu kad se prikaze ono sa slikom cuke/mace */
 #robot-disable-page {
   background-color: rgba(0, 50, 100, 0.25);
   position: fixed;
@@ -496,30 +511,36 @@ footer {
   display: none;
 }
 
+/* za paragraf koji prikazuje errore */
 #robot-error {
   color: red;
   margin-top: 0;
 }
 
+/* koristi se kad se prikazu informacije, malo da se istice glavni tekst */
 .emph-kontakt {
   font-weight: bold;
   font-size: large;
 }
 
+/* za paragraf koji prikazuje errore */
 #kontakt-validation-error {
   color: red;
 }
 
+/* onaj X u cosku gdje je slika mace i cuke */
 .robot-exit {
   font-size: 1.3em;
   text-align: right;
   margin: 0;
 }
 
+/* kad predjes misem preko X nek bude onaj mis kao da mozes kliknut */
 .robot-exit:hover {
   cursor: pointer;
 }
 
+/* animacija koja trese element */
 @keyframes shake {
   0% {
     transform: translate(0.05em, 0.05em) rotate(0deg);

@@ -45,7 +45,7 @@ function robot_check() {
         errormsg.innerHTML += "Ime nije validno! <br>";
     if (!lastname.match(/^[a-zA-Z]+$/) && lastname != "")
         errormsg.innerHTML += "Prezime nije validno! <br>";
-    if (!email.match(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/) && email != "")
+    if (!email.match(/^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}$/) && email != "")
         errormsg.innerHTML += "E-mail nije validan! <br>";
 
     if (errormsg.innerHTML != "") {
