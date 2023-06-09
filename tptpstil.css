@@ -204,9 +204,7 @@ footer {
 
 .pop {
   --b: 5px;
-  /* border thickness */
   --f: 1;
-  /* initial scale */
 
   width: 50%;
   height: 40%;
@@ -227,7 +225,6 @@ footer {
 
 .pop:hover {
   --f: 1.35;
-  /* hover scale */
 }
 
 .srsekcija {
@@ -350,7 +347,7 @@ footer {
   padding: 0.5em 1em;
   margin: 2em auto;
   text-align: justify;
-  background-image: url('/images/proizvodi/proizvod-background.png');
+  background-image: url('images/proizvodi/proizvod-background.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -424,7 +421,8 @@ footer {
 /* linkovi unutar lijevog i desnog div-a */
 .sub-container-kontakt a {
   color: white;
-  text-decoration: none; /* brise underline i ostalo, da ljepse izgleda link */
+  text-decoration: none;
+  /* brise underline i ostalo, da ljepse izgleda link */
 }
 
 /* razmak izmedju lijevog i desnog div-a */

@@ -8,7 +8,7 @@
     <title>ELCOMPANY - Kontakt</title>
     <script src="https://kit.fontawesome.com/069068b4ae.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="tptpstil.css" type="text/css">
-    <link rel="icon" href="/images/icon.png">
+    <link rel="icon" href="images/icon.png">
 </head>
 
 <body>
@@ -26,20 +26,10 @@
             </nav>
         </div>
 
-        <!--
-            ovo empty su prazni elementi koji su sirine cijele stranice i imaju neku visinu
-            sluze da se napravi malo razmaka izmedju navigacije i elemenata sa infomacijama
-
-            &nbsp; se mora dodati da bi element imao neku visinu, jer browser ce prakticno
-            izbrisat obicni space ako stavis, ovo nbsp se skracenica za non-breaking space
-            odnosno space koji ne prelazi u novi red i uvijek se prikazuje
-        -->
         <div class="empty">&nbsp;</div>
         <div class="empty">&nbsp;</div>
 
-        <!-- ovo su sad elementi koji imaju "Mogućnost dostave" i "Kako doći do nas", tj. ona dva gornja -->
         <div class="main-container-kontakt">
-            <!-- ovo je lijevi element -->
             <div class="sub-container-kontakt">
                 <p>Mogućnost dostave:</p>
                 <ul>
@@ -54,88 +44,46 @@
                 </ul>
             </div>
 
-            <!--
-                ovo je element koji dodaje razmak izmedju lijevog i desnog,
-                moze se to uradit i sa marginama, ali eto iz nekog razloga sam ovako odradio
-            -->
             <div class="razmak-kontakt">&nbsp;</div>
 
-            <!-- ovo je desni element -->
             <div class="sub-container-kontakt">
                 <p>Kako doći do nas <br> <br>
-                    <!-- ovo je link, unutar linka je ona ikonica za lokaciju i "Lokacija", a kad se klikne odvede na google maps, prikaze lokaciju fakulteta -->
                     <a
                         href="https://www.google.com/maps/place/Faculty+of+Electrical+Engineering/data=!4m7!3m6!1s0x475ead228f123b2d:0xcf33c765f8383821!8m2!3d44.5378682!4d18.6748216!16s%2Fg%2F121qn0mq!19sChIJLTsSjyKtXkcRITg4-GXHM88?authuser=0&hl=en&rclk=1">
-                        <!-- za ikonice se koristi biblioteka "Font Awesome", u njoj se za ikonice koristi i tag i ikonica se bira pomocu klasa -->
                         <i class="fas fa-map-marker-alt"></i> Lokacija
                     </a>
                 </p>
                 <p>
-                    <!-- ikonica i tekst za mail -->
                     <i class="fas fa-envelope"></i> E-Mail <br> elcompany@elcompany.com
                 </p>
                 <p>
-                    <!-- ikonica i tekst za telefon -->
                     <i class="fas fa-phone"></i> Telefon <br>
                     +387 35 259 600 <br>
                     +387 35 259 617 <br>
                     +387 80 05 03 05
                 </p>
             </div>
-
         </div>
 
-        <!--
-            info-kontakt je za cijeli ovaj dio sa informacijama
-
-            request-info-kontakt je dio stranice sto se odma vidi, onaj dio gdje se unose podaci
-
-            info-display-kontakt je dio stranice koji se prikaze kad se verifikuju podaci (ono informacije)
-            ovaj dio je prvobitno sakriven i kad se verifikuju podaci prikaze se, a request-info-kontakt se sakrije
-            verifikacija, prikazivanje i sakrivanje se radi preko JavaScript-a
-        -->
         <div class="info-kontakt" id="info-kontakt">
             <div class="request-info-kontakt">
                 <p>Da bi ste pristupili našim informacijama popunite sljedeci obrazac</p>
-                <!-- ovo je obarazac za unos podataka -->
                 <form>
                     <h1>Pristup</h1>
-                    <!--
-                        ovaj kontakt-validation-error je prazan paragraf,
-                        ako nesto ne valja sa unesenim podacima u njemu se prikaze poruka sta ne valja
-                        ovaj prikaz poruka se radi preko JavaScript-a
-                    -->
                     <p id="kontakt-validation-error"></p>
                     <p>Ime (neobavezno)</p>
-                    <!--
-                        pattern="[A-Za-z]" znaci da mozes unosit samo velika i mala slova,
-                        ovdje je to prakticno beskorisno, jer se cijela verifikacije radi preko JavaScript-a,
-                        ali ostavljeno je jer se ista stvar koristi i u JavaScript-u, pa da se vidi koji format treba,
-                        ili eventualno kad bi se doradjivalo nesto moze pomoc 
-                    -->
                     <input type="text" id="kontakt-ime" pattern="[A-Za-z]">
                     <p>Prezime (neobavezno)</p>
                     <input type="text" id="kontakt-prezime" pattern="[A-Za-z]">
                     <p>E-mail (neobavezno)</p>
-                    <!--
-                        pattern znaci mozes imat mala i velika slova, brojeve, znakove -9._%+-
-                        zatim mora slijedit @
-                        zatim mozes koristit mala i velika slova, brojeve tacku i crticu
-                        zatim mora bit tacka
-                        zatim mozes koristit mala i velika slova i to minimalno 2
-
-                        placeholder je sivi tekst koji kao nije tu, nego samo govori korisniku sta da upise
-                    -->
-                    <input type="email" id="kontakt-email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    <input type="email" id="kontakt-email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$"
                         placeholder="naziv@domena.com">
                     <p> Nisam robot (obavezno):
-                        <!-- ovo je ona kvacica, checked je da li je oznacena, ovdje je postavljeno da na pocetku nije i ovo onclick je dio JavaScript-a -->
                         Potvrdi<input type="checkbox" name="robot" checked="false" onclick="robot_check()">
                     </p>
                 </form>
             </div>
 
-            <!-- ovdje se samo prikazuju infomacije, malo stilizirane CSS-om -->
             <div id="info-display-kontakt">
                 <p class="emph-kontakt">Informacije:</p>
                 <span>
@@ -145,7 +93,7 @@
                     računarske opreme.
                     Naša kompanija je osnovana 17.5.2023. godine
                 </span>
-                <p class="emph-kontakt">Nešto detaljnije o našem kolektivu:
+                <p class="emph-kontakt">Nešto detaljnije o našem kolektivu:</p>
                 <p>
                     Osnivač ove ove firme odnosno kompanije je Mahir Suljić, nešto više o njemu možete pronaći na
                     njegovom
@@ -217,7 +165,6 @@
             </div>
         </div>
 
-        <!-- malo praznog prostora prije footera -->
         <div class="empty">&nbsp;</div>
     </section>
     <footer>
@@ -225,28 +172,18 @@
             2023. godina</p>
     </footer>
 
-    <!--
-        kad odemo da potvrdimo da nismo robot, izadje onaj prozorcic sa slikom i iza sve posivi malo
-        robot-disable-page je div koji se proteze preko cijelog ekrana i to je ono sivkasto iza sto se vidi
-        robot-kontakt-container je onaj div sa slikom psa ili macke
-    -->
     <div id="robot-disable-page">&nbsp;</div>
     <div id="robot-kontakt-container">
         <div id="robot-kontakt">
-            <!-- ovo je onaj X u cosku -->
             <p class="robot-exit" onclick="robot_exit()"><b>x</b></p>
-            <!-- slicno kao gore u formi, ovo je prazan paragraf koji sluzi za ispisivanje errora -->
             <p id="robot-error"></p>
-            <!-- prazna slika, sluzi za prikaz slike zivorinje, slika se prikazuje pomocu JavaScript-a -->
             <img id="robot-image" src="" alt="životinja">
             <p>Koja je životinja na slici?</p>
             <input type="text" name="robot-answer" id="robot-answer"> <br>
-            <!-- ovo je ono dugme na dnu prozorcica -->
             <input type="submit" value="Pošalji odgovor" id="robot-answer-btn" onclick="robot_answer()">
         </div>
     </div>
 
     <script src="tptpobrazac.js"></script>
 </body>
-
 </html>
